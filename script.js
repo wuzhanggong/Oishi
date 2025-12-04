@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // TODO: thay URL bằng endpoint của bạn (Apps Script / API)
-      const endpoint = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+      const endpoint = 'https://script.google.com/macros/s/AKfycbyY7dkzNYrq6pOYbjCexlTuo0d764MyihhGizxd_0nyspKKWhkdoEdn24hdcMLug7EltQ/exec';
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
