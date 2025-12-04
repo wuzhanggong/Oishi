@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khảo sát - Liwayway style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Đóng góp ý kiến về Hội nghị Người lao động 2025</h1>
+    <p class="subtitle">Áp Dụng Cho Cấp Tổ Trưởng Trở Lên</p>
+    <p class="note">Lưu ý: Các ý kiến đóng góp sẽ được BCH. Công Đoàn tổng hợp ...</p>
+
+    <form id="surveyForm" novalidate>
+      <div class="deadline" id="deadlineText">Hạn chót gửi khảo sát: <strong id="deadlineDate">25/10/2025</strong></div>
+
+      <!-- Step 1 -->
+      <fieldset class="step" data-step="1">
+        <legend>Phần 1: Thông tin cá nhân</legend>
+        <label> Mã NV: * <input name="employee_id" required /></label>
+        <label> Họ và tên: <input name="name" /></label>
+        <label> Bộ phận: <input name="department" /></label>
+        <label> Chức vụ: <input name="position" /></label>
+        <div class="buttons">
+          <button type="button" class="next">Tiếp theo</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 2 -->
+      <fieldset class="step hidden" data-step="2">
+        <legend>Phần 2: Ý kiến</legend>
+        <label>Bạn đánh giá chung về ... (1-5): *
+          <select name="rating" required>
+            <option value="">Chọn</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+        </label>
+        <label>Ý kiến chi tiết:
+          <textarea name="comment" rows="5"></textarea>
+        </label>
+        <div class="buttons">
+          <button type="button" class="prev">Quay lại</button>
+          <button type="button" class="next">Tiếp theo</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 3 -->
+      <fieldset class="step hidden" data-step="3">
+        <legend>Hoàn tất</legend>
+        <p>Kiểm tra lại thông tin rồi gửi.</p>
+        <div class="buttons">
+          <button type="button" class="prev">Quay lại</button>
+          <button type="submit" id="submitBtn">Gửi khảo sát</button>
+        </div>
+      </fieldset>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+    </form>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Được triển khai bởi Charl94. v1</p>
+      <p>Để được hỗ trợ, vui lòng liên hệ Phòng Nhân sự.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
